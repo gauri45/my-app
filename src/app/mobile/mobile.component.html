@@ -1,0 +1,42 @@
+<p> Mobile Works </p>
+<h1 *ngIf = "show"> Company Name : {{firstName + " " +lastName}} </h1>
+<button (click)= "buttonClicked()"> My Button </button> <br> <br> 
+<button (click)= "toggleSwitch()"> show </button>
+<table>
+    <tr>
+        <th colspan="3"> Employee Details</th>
+    </tr>
+    <tr>
+        <th> Id </th>
+        <th> Name </th>
+        <th> Gender </th>
+    </tr>
+    <tr *ngFor = "let emp of Employees">
+        <td> {{emp.id}} </td>
+        <td> {{emp.name}} </td>
+        <td> {{emp.gender}} </td>
+    </tr>
+    </table>
+<h6> One way data binding </h6>
+<h1>
+    <li> Name : {{name1}}</li>
+    <input type="text" [value]="name1">
+</h1>
+<h6> Two way data binding </h6>
+<h1>  
+    <li> Name : {{name2}} </li>
+    <input type="text" [(ngModel)]="name2">
+</h1><br>
+    <button class = "colorClass"> My Red Button</button>
+    <button class = "colorClass boldClass"> My Red Bold Button</button>
+    <button class = "colorClass boldClass italicClass"> My Red Bold Italic Button </button>
+    <button class = "colorClass" [ngClass] = "addClasses()"> My Button </button>
+
+
+
+
+
+
+
+
+
